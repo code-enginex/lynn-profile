@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">My Portfolio</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#schools">Schools</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#career">Career-Prospects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-content">
+            <div class="photo">
+                <img src="lynn.jpg" alt="Your Photo">
+            </div>
+            <div class="about-text">
+                <h1>BLIS Student at Cocis</h1>
+                <h2>Nalule Lynnet</h2>
+                <p>I am an IT student at Makerere University with a passion for software development and emerging technologies. I enjoy working on various projects that help solve real-world problems, and I'm constantly learning and improving my skills in programming and web development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schools" class="schools-attended">
+        <h1>Schools Attended</h1>
+        <div class="school-cards">
+            <div class="card">
+                <div class="icon">
+                    <img src="muk.png" alt="University Icon">
+                </div>
+                <h2>Makerere University</h2>
+                <p>Duration: 2022 - To-date</p>
+                <p>Achievement: Bachelor of Library and Information Sciences</p>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="bishop.png" alt="Secondary School Icon">
+                </div>
+                <h2>Bishop's Senior School Mukono</h2>
+                <p>Duration: 2015 - 2020</p>
+                <p>Achievement: UCE & UACE</p>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="seeta.png" alt="Primary School Icon">
+                </div>
+                <h2>Seeta Parents Primary School</h2>
+                <p>Duration: 2006 - 2014</p>
+                <p>Achievement: Primary Leaving Examination</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-experience">
+        <h1>Work Experience</h1>
+        <div class="experience-card">
+            <h2>Nakasero Hospital</h2>
+            <p class="position">IT Specialist</p>
+            <p class="duration">June 2024 - Present</p>
+            <p class="description">
+                Involved in managing the hospital's IT infrastructure, ensuring the smooth operation of digital systems, implementing security measures, and supporting hospital staff with technical issues.
+            </p>
+        </div>
+    </section>
+
+    <section id="career" class="career-prospects">
+        <div class="prospects-content">
+            <div class="text-content">
+                <h1>Career Prospects</h1>
+                <p>
+                    As a Library and Information Sciences (LIS) student with a focus on IT, I aim to bridge the gap between information management and emerging technologies. My goal is to contribute to digital transformation in libraries and information centers, focusing on:
+                </p>
+                <ul>
+                    <li>Implementing digital library systems for efficient information retrieval</li>
+                    <li>Exploring data management, analysis, and archiving techniques</li>
+                    <li>Integrating IT solutions to enhance information accessibility</li>
+                    <li>Leveraging emerging technologies like AI and machine learning to improve information services</li>
+                </ul>
+                <p>
+                    I aspire to work in roles that combine IT skills with information management, such as systems librarian, data analyst, or IT consultant for information institutions.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="career.jpg" alt="Career Prospects Image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="hobbies" class="hobbies">
+        <h1>Hobbies</h1>
+        <div class="hobbies-content">
+            <div class="hobby-card">
+                <img src="reading.jpg" alt="Reading" class="hobby-image">
+                <h2>Reading</h2>
+                <p>Exploring a variety of genres, especially fiction, helps me expand my imagination and knowledge.</p>
+            </div>
+            <div class="hobby-card">
+                <img src="travelling.jpg" alt="Traveling" class="hobby-image">
+                <h2>Traveling</h2>
+                <p>Discovering new places and cultures broadens my perspective and adds joy to life.</p>
+            </div>
+            <div class="hobby-card">
+                <img src="photography.jpg" alt="Photography" class="hobby-image">
+                <h2>Photography</h2>
+                <p>Capturing moments through the lens allows me to express my creativity and document beautiful scenes.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-me">
+        <h1>Contact Me</h1>
+        <div class="contact-content">
+            <form action="mailto:nalulelynnet@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Lynnet. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

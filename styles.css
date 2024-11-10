@@ -1,0 +1,526 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navbar ul li::after {
+    content: "|";
+    color: white;
+    margin-left: 10px;
+}
+
+.navbar ul li:last-child::after {
+    content: "";
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar ul.active {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        padding: 20px;
+        width: 200px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* About Me Section Styles */
+.about-me {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.about-text h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+}
+
+/* Responsive Styles for About Me */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo img {
+        margin: 0 0 20px 0;
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Schools Attended Section */
+.schools-attended {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.schools-attended h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.school-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.card .icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .school-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}
+
+/* Work Experience Section */
+.work-experience {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.work-experience h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.experience-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.experience-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.experience-card .position {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.experience-card .duration {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.experience-card .description {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-card {
+        width: 90%;
+    }
+
+    .experience-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .experience-card .position {
+        font-size: 1.3rem;
+    }
+
+    .experience-card .description {
+        font-size: 1rem;
+    }
+}
+
+/* Career Prospects Section */
+.career-prospects {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.prospects-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    margin-right: 20px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: left;
+}
+
+.text-content ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+}
+
+.image-content {
+    flex: 1;
+    text-align: right;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .prospects-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin-right: 0;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .image-content {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image-content img {
+        max-width: 90%;
+    }
+}
+
+/* Hobbies Section */
+.hobbies {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.hobbies h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.hobbies-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hobby-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+}
+
+.hobby-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hobby-card h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.hobby-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .hobbies h1 {
+        font-size: 2.5rem;
+    }
+
+    .hobbies-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Me Section */
+.contact-me {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-me h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-content form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.contact-content label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-content input,
+.contact-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-content button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-content button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-me h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-content form {
+        font-size: 1rem;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
